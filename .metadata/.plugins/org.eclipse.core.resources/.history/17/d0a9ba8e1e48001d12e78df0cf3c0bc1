@@ -1,0 +1,18 @@
+package operations;
+
+public class multiplication {
+
+	Integer firstNumber;
+	Integer secondNumber;
+	
+	public 
+	
+	public multiplication(Integer firstNumber, Integer secondNumber) {
+		super();
+		this.firstNumber = firstNumber;
+		this.secondNumber = secondNumber;
+	}
+	
+	
+	
+}

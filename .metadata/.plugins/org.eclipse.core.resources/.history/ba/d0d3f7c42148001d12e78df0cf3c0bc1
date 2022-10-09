@@ -1,0 +1,58 @@
+package application;
+
+import java.util.Scanner;
+
+import operations.Addition;
+import operations.Division;
+import operations.Multiplication;
+import operations.Subtraction;
+
+public class Program {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Addition sum = new Addition();
+		Subtraction sub = new Subtraction();
+		Multiplication mul = new Multiplication();
+		Division div = new Division();
+		
+		System.out.println("Enter the number of the operation");
+		System.out.print("Addition: 1\n"
+				+ "Subtraction: 2\n"
+				+ "Multiplication: 3\n"
+				+ "Division: 4\n"
+				+ "Finish: 0");
+		
+		int operation = sc.nextInt();
+		
+		System.out.print("Enter the first value:");
+		int firstValue = sc.nextInt();
+		System.out.print("Enter the second value:");
+		int secondValue = sc.nextInt();
+		
+		while (operation != 0) {
+			switch (operation) {
+			case 1:
+				System.out.println("Result: " + sum.result(firstValue, secondValue));
+				break;
+			case 2:
+				System.out.println("Result: " + sub.result(firstValue, secondValue));
+				break;
+			case 3:
+				System.out.println("Result: " + mul.result(firstValue, secondValue));
+				break;
+			case 4:
+				System.out.printf("Result: %.2f%n", div.result(firstValue, secondValue));
+				break;
+			}
+			
+			System.out.print("Enter the number of the operation:");
+			operation = sc.nextInt();
+		}
+		
+		System.out.println("Thanks for use this calculator!");
+		
+		sc.close();
+	}
+}

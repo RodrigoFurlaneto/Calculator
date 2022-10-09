@@ -1,0 +1,19 @@
+package application;
+
+import java.util.Scanner;
+
+public class Program {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the munber of your choice");
+		System.out.print("Addition: 1\n"
+				+ "Subtraction: 2\n"
+				+ "Multiplication: 3\n"
+				+ "Division: 4");
+		
+		sc.close();
+	}
+}
